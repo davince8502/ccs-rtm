@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ccs-rtm.iml" filepath="$PROJECT_DIR$/.idea/ccs-rtm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ccs-rtm-domain/ccs-rtm-domain.iml" filepath="$PROJECT_DIR$/ccs-rtm-domain/ccs-rtm-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ccs-rtm-gateway/ccs-rtm-gateway.iml" filepath="$PROJECT_DIR$/ccs-rtm-gateway/ccs-rtm-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/css-rtm-process/css-rtm-process.iml" filepath="$PROJECT_DIR$/css-rtm-process/css-rtm-process.iml" />
+    </modules>
+  </component>
+</project>
