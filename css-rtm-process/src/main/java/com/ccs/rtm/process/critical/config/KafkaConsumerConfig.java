@@ -2,6 +2,7 @@ package com.ccs.rtm.process.critical.config;
 
 import ccs.rtm.domain.entity.FrameData;
 import com.ccs.rtm.process.critical.kafka.MultiPartitionMessageConsumer;
+import com.ccs.rtm.process.critical.kafka.SingleMessageConsumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -67,5 +68,10 @@ public class KafkaConsumerConfig {
     @Bean
     public MultiPartitionMessageConsumer listener() {
         return new MultiPartitionMessageConsumer();
+    }
+
+    @Bean
+    public SingleMessageConsumer singleListener() {
+        return new SingleMessageConsumer();
     }
 }

@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
+import java.sql.Timestamp;
+import java.time.LocalTime;
+
 @Data
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
@@ -13,17 +16,10 @@ import lombok.*;
 public class FrameData {
 
     private String deviceId;
-
-    @JsonProperty("panicButoom")
     private Integer panicButoom;
-
-//    @JsonProperty("temperature")
     private Float temperature;
-
-//    @JsonProperty("doorSensor")
     private Integer doorSensor;
-
-//    @JsonProperty("accidentSensor")
     private Integer accidentSensor;
+    private Long dateArrive;
 
 }
