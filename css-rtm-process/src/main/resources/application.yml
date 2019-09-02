@@ -3,4 +3,10 @@ server:
 spring:
   kafka:
     bootstrap-servers: localhost:9092
-    topic: baeldung
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        kafka:
+#          core: TRACE

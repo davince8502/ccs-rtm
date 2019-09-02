@@ -1,6 +1,6 @@
 package com.ccs.rtm.process.critical.config;
 
-import com.fasterxml.jackson.databind.JsonDeserializer;
+
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;
@@ -18,8 +18,8 @@ import java.util.Map;
 @EnableKafka
 public class KafkaProducerConfig {
     @Bean
-    public ProducerFactory<String, String> producerFactory() {
-        return new DefaultKafkaProducerFactory<>(producerConfigs());
+    public ProducerFactory<String, Object> producerFactory() {
+        return new DefaultKafkaProducerFactory<>(producerConfigs(),  new StringSerializer(), new JsonSerializer());
     }
 
     @Bean
@@ -36,7 +36,7 @@ public class KafkaProducerConfig {
     }
 
     @Bean
-    public KafkaTemplate<String, String> kafkaTemplate() {
-        return new KafkaTemplate<String, String>(producerFactory());
+    public KafkaTemplate<String, Object> kafkaTemplate() {
+        return new KafkaTemplate<String, Object>(producerFactory());
     }
 }
