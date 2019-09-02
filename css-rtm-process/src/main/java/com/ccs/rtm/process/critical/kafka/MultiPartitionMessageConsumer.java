@@ -35,7 +35,7 @@ public class MultiPartitionMessageConsumer {
     @KafkaListener(id = "id0", topicPartitions = { @TopicPartition(topic = TOPIC_CCS_RTM, partitions = { "0" }) })
     public void listenPartition0(ConsumerRecord<String, FrameData> record) throws InterruptedException {
 
-        System.out.println("Listener Id0, Thread ID: " + Thread.currentThread().getId());
+//        System.out.println("Listener Id0, Thread ID: " + Thread.currentThread().getId());
         evaluateFrame(record);
 //        countDownLatch0.countDown();
     }
@@ -45,7 +45,7 @@ public class MultiPartitionMessageConsumer {
     @KafkaListener(id = "id1", topicPartitions = { @TopicPartition(topic = TOPIC_CCS_RTM, partitions = { "1" }) })
     public void listenPartition1(ConsumerRecord<String, FrameData> record) throws InterruptedException {
 
-        System.out.println("Listener Id1, Thread ID: " + Thread.currentThread().getId());
+//        System.out.println("Listener Id1, Thread ID: " + Thread.currentThread().getId());
         evaluateFrame(record);
 //        countDownLatch1.countDown();
     }
@@ -53,17 +53,17 @@ public class MultiPartitionMessageConsumer {
     @KafkaListener(id = "id2", topicPartitions = { @TopicPartition(topic = TOPIC_CCS_RTM, partitions = { "2" }) })
     public void listenPartition2(ConsumerRecord<String, FrameData> record) throws InterruptedException {
 
-        System.out.println("Listener Id2, Thread ID: " + Thread.currentThread().getId());
+//        System.out.println("Listener Id2, Thread ID: " + Thread.currentThread().getId());
         evaluateFrame(record);
 //        countDownLatch2.countDown();
     }
 
 
     private void evaluateFrame(ConsumerRecord<String, FrameData> record) throws InterruptedException {
-        accidentEvaluator.evaluateViariable(record);
-        doorSensorEvaluator.evaluateViariable(record);
-        panicButtonEvaluator.evaluateViariable(record);
-        temperatureEvaluator.evaluateViariable(record);
+        accidentEvaluator.evaluateVariable(record);
+        doorSensorEvaluator.evaluateVariable(record);
+        panicButtonEvaluator.evaluateVariable(record);
+        temperatureEvaluator.evaluateVariable(record);
     }
 
 

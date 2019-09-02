@@ -10,14 +10,12 @@ public class AccidentEvaluator extends AbstractEvaluator {
 
     @Override
     @Async
-    public void evaluateViariable(ConsumerRecord<String, FrameData> record) throws InterruptedException {
+    public void evaluateVariable(ConsumerRecord<String, FrameData> record) throws InterruptedException {
 
-        Thread.sleep(10);
+       Thread.sleep(10);
 
-        System.out.println("AccidentEvaluator Executing thread name - " + Thread.currentThread().getName());
+//        System.out.println("AccidentEvaluator Executing thread name - " + Thread.currentThread().getName());
         this.printDuration(record);
-
-
 
     }
 
